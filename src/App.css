@@ -1,0 +1,9 @@
+#root {
+  margin-left: 560px;
+}
+.main-heading {
+  color: aqua;
+}
+.main-heading:hover {
+  color: blue;
+}
