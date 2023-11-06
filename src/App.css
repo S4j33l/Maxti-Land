@@ -1,9 +1,27 @@
-#root {
-  margin-left: 560px;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: aquamarine;
+}
+.main-heading-div {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 .main-heading {
-  color: aqua;
+  width: fit-content;
+  font-size: 3rem;
 }
-.main-heading:hover {
-  color: blue;
+.sign-in-heading {
+  width: fit-content;
+  padding-top: 20px;
+}
+.sign-in-heading-div {
+  padding: 5rem;
 }
