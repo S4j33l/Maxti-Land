@@ -1,15 +1,8 @@
-import "./App.css";
-export default function MyPage() {
+import { Route, Routes } from "react-router-dom";
+import LoginPage from "./components/LoginPage";
+import MainPage from "./components/MainPage";
+export default function App() {
   return (
-    <>
-      <div className="main-heading-div">
-        <h1 className="main-heading">Welcome to fooooteh</h1>
-        <div className="sign-in-heading-div">
-          <h2 className="sign-in-heading">
-            Please enter your email and password
-          </h2>
-        </div>
-      </div>
-    </>
+      <LoginPage/>
   );
 }
