@@ -1,5 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import "./LoginPage.css";
-export default function LoginPage() {
+export default function LoginPage({ emojiHolder }) {
+  const navigate = useNavigate()
+  emojiHolder = ":)"
   return (
     <>
       <div className="column-div">
@@ -18,10 +21,13 @@ export default function LoginPage() {
           placeholder="Password"
         />
         <div className="login-div">
-          <button className="login-button">
+          <button className="login-button" onClick={() => navigate("/main")}>
             <span className="login-text-span">Login</span>
           </button>
         </div>
+        <span className="real-nigga-span">
+          <p>Made by a real nigga {emojiHolder}</p>
+        </span>
       </div>
     </>
   );

@@ -21,7 +21,7 @@ body {
 }
 .sign-in-heading-div {
   padding-top: 7rem;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
 }
 #email-input {
   padding: 6px;
@@ -38,7 +38,7 @@ body {
 #email-input:hover {
   transform: translateY(-5px);
   box-shadow: 0px 2px 10px 2px black;
-  transition: ease-in 1s;
+  transition: ease-in 0.5s;
 }
 #password-input {
   padding: 6px;
@@ -55,13 +55,10 @@ body {
 #password-input:hover {
   transform: translateY(-5px);
   box-shadow: 0px 2px 10px 2px black;
-  transition: ease-in 1s;
+  transition: ease-in 0.5s;
 }
 .login-div {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  padding: 2rem;
+  padding: 3rem;
 }
 .login-button {
   color: grey;
@@ -78,4 +75,13 @@ body {
   transform: translateY(-5px);
   box-shadow: 0px 2px 10px 2px black;
   transition: ease-in 10ms;
+}
+.login-button:active {
+  transform: translateY(5px);
+  transition: ease-in 10ms;
+}
+.real-nigga-span {
+  top: 36rem;
+  right: 2rem;
+  position: absolute;
 }
