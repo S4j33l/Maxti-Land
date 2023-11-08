@@ -1,0 +1,15 @@
+.welcome-main-heading-div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.welcome-main-heading{
+    color: orange;
+}
+.selection-sub-heading{
+    color: purple;
+}
+.main-content-div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
