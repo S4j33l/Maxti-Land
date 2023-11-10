@@ -1,12 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import "./LoginPage.css";
 export default function LoginPage({ emojiHolder }) {
-  const navigate = useNavigate()
-  emojiHolder = ":)"
+  const navigate = useNavigate();
+  emojiHolder = ":)";
   return (
     <>
       <div className="column-div">
-        <h1 className="main-heading">Welcome to MUArchive</h1>
+        <h1 className="main-heading">
+          Welcome to <span className="MUArchive-heading">MUArchive</span>
+        </h1>
         <div className="sign-in-heading-div">
           <h2 className="sign-in-heading">
             Please enter your email and password
