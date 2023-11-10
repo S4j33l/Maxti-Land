@@ -6,7 +6,7 @@ export default function LoginPage({ emojiHolder }) {
   return (
     <>
       <div className="column-div">
-        <h1 className="main-heading">Welcome to fooooteh</h1>
+        <h1 className="main-heading">Welcome to MUArchive</h1>
         <div className="sign-in-heading-div">
           <h2 className="sign-in-heading">
             Please enter your email and password
