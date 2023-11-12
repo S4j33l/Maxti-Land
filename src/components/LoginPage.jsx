@@ -24,7 +24,7 @@ export default function LoginPage() {
           </button>
         </div>
         <span className="real-nigga-span">
-          <p>Made by a real nigga</p>
+          <p>Made by Mr Boo</p>
         </span>
       </div>
     </>

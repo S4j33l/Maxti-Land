@@ -37,20 +37,31 @@
 }
 .joke {
   padding-top: 2rem;
-  color: black;
-  font-size: 1.5rem;
+  color: grey;
+  font-size: 2rem;
+  font-weight: 900 npm;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.checkboxes-div{
+.checkboxes-div {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.label-checkbox{
+.label-checkbox {
   padding-left: 2rem;
 }
-.joketype-span{
+.joketype-span {
+  color: grey;
   padding-left: 0.5rem;
+}
+.delivery {
+  padding-top: 2rem;
+  color: grey;
+  font-size: 2rem;
+  font-weight: 900 npm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,18 +1,28 @@
 import axios from "axios";
 import "./MainPage.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 export default function MainPage() {
   const baseURL = "https://v2.jokeapi.dev/joke";
   const [myJoke, setMyJoke] = useState("");
+  const [isJokeTypeTwoPart, setIsJokeTypeTwoPart] = useState(false);
+  const [twoPartJokeDelivery, setTwoPartJokeDelivery] = useState("");
   function callJokeAPI() {
-    axios
-      .get(`${baseURL}/Any?format=txt`)
-      .then((response) => setMyJoke(response.data));
+    axios.get(`${baseURL}/Any?`).then((response) => {
+      if (response.data.type === "twopart") {
+        setIsJokeTypeTwoPart(true);
+        setMyJoke(response.data.setup);
+        setTimeout(() => setTwoPartJokeDelivery(response.data.delivery), 2000);
+        
+      } else {
+        setIsJokeTypeTwoPart(false);
+        setMyJoke(response.data.joke);
+      }
+    });
   }
   return (
     <>
       <div className="welcome-main-heading-div">
-        <h1 className="welcome-main-heading">Welcome back nigga!</h1>
+        <h1 className="welcome-main-heading">Welcome back!</h1>
         <h2 className="selection-sub-heading">
           Press the button below to generate a random joke!
         </h2>
@@ -22,25 +32,10 @@ export default function MainPage() {
           Joke Around
         </button>
       </div>
-      <div className="checkboxes-div">
-        <label className="label-checkbox">
-          <input type="checkbox" id="joketype-checkbox" />
-        </label>
-        <span className="joketype-span">Miscellanous</span>
-        <label className="label-checkbox">
-          <input type="checkbox" id="joketype-checkbox" />
-        </label>
-        <span className="joketype-span">Dark</span>
-        <label className="label-checkbox">
-          <input type="checkbox" id="joketype-checkbox" />
-        </label>
-        <span className="joketype-span">Programming</span>
-        <label className="label-checkbox">
-          <input type="checkbox" id="joketype-checkbox" />
-        </label>
-        <span className="joketype-span">Pun</span>
-      </div>
       <p className="joke">{myJoke}</p>
+      <p className="delivery">
+        {isJokeTypeTwoPart ? <p>{twoPartJokeDelivery}</p> : null}
+      </p>
     </>
   );
 }
