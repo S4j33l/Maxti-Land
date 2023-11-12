@@ -5,15 +5,15 @@
   align-items: center;
 }
 .main-heading {
+  color: grey;
   font-size: 5rem;
 }
-.maxti-land-span {
-  color: grey;
-}
 .slogan-heading {
+  color: grey;
   padding-top: 3rem;
 }
 .sign-in-heading-div {
+  color: grey;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
@@ -31,7 +31,7 @@
 }
 #email-input:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 2px 10px 2px black;
+  box-shadow: 0px 2px 10px 2px grey;
   transition: ease-in 0.5s;
 }
 #password-input {
@@ -48,20 +48,20 @@
 }
 #password-input:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 2px 10px 2px black;
+  box-shadow: 0px 2px 10px 2px grey;
   transition: ease-in 0.5s;
 }
 .login-div {
   padding: 3rem;
 }
 .login-button {
-  color: balck;
+  color: black;
   width: 210px;
   font-size: 1.5rem;
   background-color: grey;
   border-style: solid;
-  border-radius: 1em;
-  border-color: aqua;
+  border-radius: 1rem;
+  border-color: grey ;
   cursor: pointer;
 }
 .login-button:hover {

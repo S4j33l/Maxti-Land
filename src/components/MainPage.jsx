@@ -1,14 +1,13 @@
 import axios from "axios";
 import "./MainPage.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export default function MainPage() {
   const baseURL = "https://v2.jokeapi.dev/joke";
   const [myJoke, setMyJoke] = useState("");
   function callJokeAPI() {
     axios
       .get(`${baseURL}/Any?format=txt`)
-      .then((response) => setMyJoke(response.data))
-      .then(() => console.log(myJoke));
+      .then((response) => setMyJoke(response.data));
   }
   return (
     <>
@@ -23,9 +22,25 @@ export default function MainPage() {
           Joke Around
         </button>
       </div>
-      <div>
-        <p className="joke">{myJoke}</p>
+      <div className="checkboxes-div">
+        <label className="label-checkbox">
+          <input type="checkbox" id="joketype-checkbox" />
+        </label>
+        <span className="joketype-span">Miscellanous</span>
+        <label className="label-checkbox">
+          <input type="checkbox" id="joketype-checkbox" />
+        </label>
+        <span className="joketype-span">Dark</span>
+        <label className="label-checkbox">
+          <input type="checkbox" id="joketype-checkbox" />
+        </label>
+        <span className="joketype-span">Programming</span>
+        <label className="label-checkbox">
+          <input type="checkbox" id="joketype-checkbox" />
+        </label>
+        <span className="joketype-span">Pun</span>
       </div>
+      <p className="joke">{myJoke}</p>
     </>
   );
 }

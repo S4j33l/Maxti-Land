@@ -1,18 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import "./LoginPage.css";
-export default function LoginPage({ emojiHolder }) {
+export default function LoginPage() {
   const navigate = useNavigate();
-  emojiHolder = ":)";
   return (
     <>
       <div className="column-div">
-        <h1 className="main-heading">
-          Welcome to{" "}
-          <span className="maxti-land-span">Maxti Land {emojiHolder}</span>
-        </h1>
-        <h2 className="slogan-heading">
-          Let's laugh at everything! The more sensitive the better!
-        </h2>
+        <h1 className="main-heading">Welcome to Maxti Land </h1>
+        <h2 className="slogan-heading">Maxti rahi rukni chaiye</h2>
         <div className="sign-in-heading-div">
           <h3>Please enter your email and password</h3>
         </div>
@@ -30,7 +24,7 @@ export default function LoginPage({ emojiHolder }) {
           </button>
         </div>
         <span className="real-nigga-span">
-          <p>Made by a real nigga {emojiHolder}</p>
+          <p>Made by a real nigga</p>
         </span>
       </div>
     </>

@@ -4,12 +4,12 @@
   flex-direction: column;
 }
 .welcome-main-heading {
-  color: black;
+  color: grey;
   font-size: 5rem;
 }
 .selection-sub-heading {
   padding-top: 4rem;
-  color: black;
+  color: grey;
 }
 .main-content-div {
   display: flex;
@@ -22,8 +22,8 @@
   font-size: 1.5rem;
   background-color: grey;
   border-style: solid;
-  border-radius: 1em;
-  border-color: aqua;
+  border-radius: 1rem;
+  border-color: grey;
   cursor: pointer;
 }
 .joke-generator-button:hover {
@@ -36,9 +36,21 @@
   transition: ease-in 10ms;
 }
 .joke {
+  padding-top: 2rem;
   color: black;
   font-size: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.checkboxes-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.label-checkbox{
+  padding-left: 2rem;
+}
+.joketype-span{
+  padding-left: 0.5rem;
 }
