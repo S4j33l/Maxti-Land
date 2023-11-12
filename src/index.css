@@ -3,6 +3,10 @@
   padding: 0;
 }
 body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   height: 100vh;
-  background-color: #E23D28;
+  background-image: url(/src/assets/laugh.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 500px;
 }

@@ -7,12 +7,14 @@ export default function LoginPage({ emojiHolder }) {
     <>
       <div className="column-div">
         <h1 className="main-heading">
-          Welcome to <span className="MUArchive-heading">MUArchive</span>
+          Welcome to{" "}
+          <span className="maxti-land-span">Maxti Land {emojiHolder}</span>
         </h1>
+        <h2 className="slogan-heading">
+          Let's laugh at everything! The more sensitive the better!
+        </h2>
         <div className="sign-in-heading-div">
-          <h2 className="sign-in-heading">
-            Please enter your email and password
-          </h2>
+          <h3>Please enter your email and password</h3>
         </div>
         <input type="text" name="email" id="email-input" placeholder="Email" />
         <br />

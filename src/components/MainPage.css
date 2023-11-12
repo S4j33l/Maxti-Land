@@ -1,16 +1,44 @@
-.welcome-main-heading-div{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.welcome-main-heading-div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.welcome-main-heading{
-    color: orange;
+.welcome-main-heading {
+  color: black;
+  font-size: 5rem;
 }
-.selection-sub-heading{
-    color: purple;
+.selection-sub-heading {
+  padding-top: 4rem;
+  color: black;
 }
-.main-content-div{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+.main-content-div {
+  display: flex;
+  padding: 5rem;
+  justify-content: center;
+}
+.joke-generator-button {
+  color: black;
+  width: 210px;
+  font-size: 1.5rem;
+  background-color: grey;
+  border-style: solid;
+  border-radius: 1em;
+  border-color: aqua;
+  cursor: pointer;
+}
+.joke-generator-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 2px 10px 2px black;
+  transition: ease-in 10ms;
+}
+.joke-generator-button:active {
+  transform: translateY(5px);
+  transition: ease-in 10ms;
+}
+.joke {
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
