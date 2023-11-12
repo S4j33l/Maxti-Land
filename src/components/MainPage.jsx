@@ -7,12 +7,11 @@ export default function MainPage() {
   const [isJokeTypeTwoPart, setIsJokeTypeTwoPart] = useState(false);
   const [twoPartJokeDelivery, setTwoPartJokeDelivery] = useState("");
   function callJokeAPI() {
-    axios.get(`${baseURL}/Any?`).then((response) => {
+    axios.get(`${baseURL}/Any?blacklistFlags=religious`).then((response) => {
       if (response.data.type === "twopart") {
-        setIsJokeTypeTwoPart(true);
+        setIsJokeTypeTwoPart(true)
         setMyJoke(response.data.setup);
         setTimeout(() => setTwoPartJokeDelivery(response.data.delivery), 2000);
-        
       } else {
         setIsJokeTypeTwoPart(false);
         setMyJoke(response.data.joke);
