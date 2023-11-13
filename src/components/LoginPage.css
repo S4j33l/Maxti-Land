@@ -26,6 +26,7 @@
   border-color: grey;
 }
 #email-input:focus {
+  color: white;
   outline: none;
   border-color: white;
 }
@@ -43,6 +44,7 @@
   border-color: grey;
 }
 #password-input:focus {
+  color: white;
   outline: none;
   border-color: white;
 }
@@ -73,7 +75,7 @@
   transform: translateY(5px);
   transition: ease-in 10ms;
 }
-.real-nigga-span {
+.real-creator-span {
   top: 36rem;
   right: 2rem;
   position: absolute;
