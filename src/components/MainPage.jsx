@@ -9,10 +9,9 @@ export default function MainPage() {
   function callJokeAPI() {
     axios.get(`${baseURL}/Dark?blacklistFlags=religious`).then((response) => {
       if (response.data.type === "twopart") {
-        setIsJokeTypeTwoPart(true)
+        setIsJokeTypeTwoPart(true);
         setMyJoke(response.data.setup);
         setTimeout(() => setTwoPartJokeDelivery(response.data.delivery), 2000);
-        setIsJokeTypeTwoPart(false)
       } else {
         setIsJokeTypeTwoPart(false);
         setMyJoke(response.data.joke);
@@ -21,7 +20,7 @@ export default function MainPage() {
   }
   return (
     <>
-      <div className="welcome-main-heading-div">
+      <div className="welcome-main-heading-div" >
         <h1 className="welcome-main-heading">Welcome back!</h1>
         <h2 className="selection-sub-heading">
           Press the button below to generate a random joke!
@@ -33,9 +32,9 @@ export default function MainPage() {
         </button>
       </div>
       <p className="joke">{myJoke}</p>
-      <p className="delivery">
+      <div className="delivery-div">
         {isJokeTypeTwoPart ? <p>{twoPartJokeDelivery}</p> : null}
-      </p>
+      </div>
     </>
   );
 }
