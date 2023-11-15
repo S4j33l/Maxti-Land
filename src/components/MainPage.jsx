@@ -23,9 +23,6 @@ export default function MainPage() {
     to: {
       y: 0,
     },
-    config: {
-      duration: 2000,
-    },
   });
   const baseURL = "https://v2.jokeapi.dev/joke";
   const [myJoke, setMyJoke] = useState("");
@@ -57,7 +54,9 @@ export default function MainPage() {
       <div className="joke-div">
         <animated.p style={jokeFade}>{myJoke}</animated.p>
         {isJokeTypeTwoPart ? (
-          <animated.p className="delivery" style={jokeFade}>{twoPartJokeDelivery}</animated.p>
+          <animated.p className="delivery" style={jokeFade}>
+            {twoPartJokeDelivery}
+          </animated.p>
         ) : null}
       </div>
     </>
