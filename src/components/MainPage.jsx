@@ -3,7 +3,7 @@ import "./MainPage.css";
 import { useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
 export default function MainPage() {
-  const fade = useSpring({
+  const pageFade = useSpring({
     from: {
       x: -500,
       opacity: 0,
@@ -14,6 +14,17 @@ export default function MainPage() {
     },
     config: {
       duration: 1000,
+    },
+  });
+  const jokeFade = useSpring({
+    from: {
+      y: 900,
+    },
+    to: {
+      y: 0,
+    },
+    config: {
+      duration: 2000,
     },
   });
   const baseURL = "https://v2.jokeapi.dev/joke";
@@ -34,7 +45,7 @@ export default function MainPage() {
   }
   return (
     <>
-      <animated.div className="welcome-main-heading-div" style={fade}>
+      <animated.div className="welcome-main-heading-div" style={pageFade}>
         <h1 className="welcome-main-heading">Welcome back!</h1>
         <h2 className="selection-sub-heading">
           Press the button below to generate a random joke!
@@ -44,9 +55,9 @@ export default function MainPage() {
         </button>
       </animated.div>
       <div className="joke-div">
-        <p>{myJoke}</p>
+        <animated.p style={jokeFade}>{myJoke}</animated.p>
         {isJokeTypeTwoPart ? (
-          <p className="delivery">{twoPartJokeDelivery}</p>
+          <animated.p className="delivery" style={jokeFade}>{twoPartJokeDelivery}</animated.p>
         ) : null}
       </div>
     </>
