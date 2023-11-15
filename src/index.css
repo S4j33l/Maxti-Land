@@ -5,8 +5,8 @@
 body {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   height: 100vh;
-  background-image: url(/src/assets/maxti.gif);
+  /* background-image: url(/src/assets/maxti.gif);
   background-repeat: no-repeat;
-  background-size: 100vw 100vh;
+  background-size: 100vw 100vh; */
   background-color: black;
 }

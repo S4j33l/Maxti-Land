@@ -2,21 +2,16 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  color: grey;
 }
 .welcome-main-heading {
-  color: grey;
   font-size: 5rem;
 }
 .selection-sub-heading {
   padding-top: 4rem;
-  color: grey;
-}
-.main-content-div {
-  display: flex;
-  padding: 5rem;
-  justify-content: center;
 }
 .joke-generator-button {
+  margin: 5rem;
   color: black;
   width: 210px;
   font-size: 1.5rem;
@@ -35,33 +30,12 @@
   transform: translateY(5px);
   transition: ease-in 10ms;
 }
-.joke {
-  padding-top: 2rem;
+.joke-div {
   color: grey;
   font-size: 2rem;
   font-weight: 900 npm;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.checkboxes-div {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.label-checkbox {
-  padding-left: 2rem;
-}
-.joketype-span {
-  color: grey;
-  padding-left: 0.5rem;
-}
-.delivery-div {
-  padding-top: 2rem;
-  color: grey;
-  font-size: 2rem;
-  font-weight: 900 npm;
-  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

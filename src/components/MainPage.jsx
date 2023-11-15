@@ -1,7 +1,21 @@
 import axios from "axios";
 import "./MainPage.css";
 import { useState } from "react";
+import { useSpring, animated } from "@react-spring/web";
 export default function MainPage() {
+  const fade = useSpring({
+    from: {
+      x: -500,
+      opacity: 0,
+    },
+    to: {
+      x: 0,
+      opacity: 1,
+    },
+    config: {
+      duration: 1000,
+    },
+  });
   const baseURL = "https://v2.jokeapi.dev/joke";
   const [myJoke, setMyJoke] = useState("");
   const [isJokeTypeTwoPart, setIsJokeTypeTwoPart] = useState(false);
@@ -20,20 +34,20 @@ export default function MainPage() {
   }
   return (
     <>
-      <div className="welcome-main-heading-div" >
+      <animated.div className="welcome-main-heading-div" style={fade}>
         <h1 className="welcome-main-heading">Welcome back!</h1>
         <h2 className="selection-sub-heading">
           Press the button below to generate a random joke!
         </h2>
-      </div>
-      <div className="main-content-div">
         <button className="joke-generator-button" onClick={callJokeAPI}>
           Joke Around
         </button>
-      </div>
-      <p className="joke">{myJoke}</p>
-      <div className="delivery-div">
-        {isJokeTypeTwoPart ? <p>{twoPartJokeDelivery}</p> : null}
+      </animated.div>
+      <div className="joke-div">
+        <p>{myJoke}</p>
+        {isJokeTypeTwoPart ? (
+          <p className="delivery">{twoPartJokeDelivery}</p>
+        ) : null}
       </div>
     </>
   );

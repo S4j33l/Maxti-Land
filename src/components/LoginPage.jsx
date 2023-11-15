@@ -15,6 +15,7 @@ export default function LoginPage() {
         }
       })
       .catch((error) => console.log(error));
+    navigate("/main");
   }
   return (
     <>
@@ -44,9 +45,7 @@ export default function LoginPage() {
             <span className="login-text-span">Login</span>
           </button>
         </div>
-        <span className="real-creator-span">
-          <p>Made by Mr Boo</p>
-        </span>
+        <p className="real-creator-paragraph">Made by Mr Boo </p>
       </div>
     </>
   );
