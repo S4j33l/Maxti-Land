@@ -16,14 +16,6 @@ export default function MainPage() {
       duration: 1000,
     },
   });
-  const jokeFade = useSpring({
-    from: {
-      y: 900,
-    },
-    to: {
-      y: 0,
-    },
-  });
   const baseURL = "https://v2.jokeapi.dev/joke";
   const [myJoke, setMyJoke] = useState("");
   const [isJokeTypeTwoPart, setIsJokeTypeTwoPart] = useState(false);
@@ -52,11 +44,11 @@ export default function MainPage() {
         </button>
       </animated.div>
       <div className="joke-div">
-        <animated.p style={jokeFade}>{myJoke}</animated.p>
+        <p>
+          {myJoke}
+        </p>
         {isJokeTypeTwoPart ? (
-          <animated.p className="delivery" style={jokeFade}>
-            {twoPartJokeDelivery}
-          </animated.p>
+          <p className="delivery">{twoPartJokeDelivery}</p>
         ) : null}
       </div>
     </>
